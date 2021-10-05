@@ -44,7 +44,7 @@
             window.scrollTo(0, document.body.scrollHeight);
         });
 
-        socket.on('disconnect', function() {
+        socket.on('user disconnected', function() {
             var item = document.createElement('li');
             item.textContent = "user disconnected";
             messages.appendChild(item);
