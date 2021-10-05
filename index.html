@@ -44,6 +44,13 @@
             window.scrollTo(0, document.body.scrollHeight);
         });
 
+        socket.on('user connected', function() {
+            var item = document.createElement('li');
+            item.textContent = "user connected";
+            messages.appendChild(item);
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+
         socket.on('user disconnected', function() {
             var item = document.createElement('li');
             item.textContent = "user disconnected";
